@@ -1,0 +1,45 @@
+/*
+    Attributions:
+
+    “Your Career in Web Development Starts Here.” Your Career in Web Development Starts Here | The Odin Project, The Odin Project, www.theodinproject.com/. Accessed 24 Jan. 2024.
+
+    https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties
+
+    https://stackoverflow.com/questions/43747185/force-css-grid-container-to-fill-full-screen-of-device
+
+    https://www.sitepoint.com/community/t/grid-style-2-rows-2-column-content-full-screen-height/337987
+
+*/
+
+* {
+
+    background-color: rgb(27, 25, 25);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+
+    color: #2272ff;
+}
+
+* {
+
+    background-color: rgb(27, 25, 25);
+}
+
+.appCanvas {
+
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    height: 100vh;
+    width: 100%;
+}
+
+

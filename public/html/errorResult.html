@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/index.js" defer></script>
+    <link rel="stylesheet" href="../css/errorResult.css">
+    <title>Weather Result</title>
+</head>
+
+<body>
+
+    <!--https://stackoverflow.com/questions/50589657/how-to-declare-variable-in-ejs-->
+    <% let errorCode=result.errorCode; let errorReason=result.errorMessage; let errorResolution='' ; if
+        (errorCode==1005) {
+        errorResolution='Check the source code and verify the API call is constructed per the API specs.' ; } else if
+        (errorCode==1006) { errorResolution='Double check your location information is correct. Then try again.' ; }
+        else if (errorCode==2006) { errorResolution='Double check the API key is correct in the local file.' ; } else if
+        (errorCode==2007) { errorResolution='Check vendor site for when API call quota refreshes.' ; } else if
+        (errorCode==2008) {
+        errorResolution='Login into vendor site and check for a reason the key is disabled. Check email as well.' ; }
+        else { errorResolution: 'Compare the error code to the vendor API doc error list. Find root cause of issue.' ; }
+        %>
+
+        <div class="appCanvas">
+
+            <div class="weatherData">
+
+                <h4>Whoops! Cannot find that location!</h4>
+                <p>Error Reason: <%=errorReason %>
+                </p>
+                <p>Resolution: <%=errorResolution %>
+                </p>
+
+            </div>
+
+            <div id="backButtonContainer">
+
+                <!--https://stackoverflow.com/questions/16036041/can-a-html-button-perform-a-post-request-->
+                <form action="/" method="get">
+
+                    <button type="submit" id="backButton">Back to Home</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>
+
+<!--
+    Attributions:
+
+    https://stackoverflow.com/questions/50589657/how-to-declare-variable-in-ejs
+    https://www.weatherapi.com/docs/
+    https://stackoverflow.com/questions/16036041/can-a-html-button-perform-a-post-request
+
+-->

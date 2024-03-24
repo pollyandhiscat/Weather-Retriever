@@ -1,2 +1,6 @@
-# Weather-Retriever
-A weather retrieving web application built using Node.js, Express.js, ejs, HTML, CSS, and JavaScript.
+# CS-469-Weather-Retriever
+Weather retrieving application written for Oregon State University's CS 469.
+
+
+
+
